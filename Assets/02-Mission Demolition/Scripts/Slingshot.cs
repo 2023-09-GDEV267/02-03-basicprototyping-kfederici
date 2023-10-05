@@ -51,7 +51,7 @@ public class Slingshot : MonoBehaviour
         projectileRigidbody.isKinematic = true;
     }
 
-    private void Update()
+    void Update()
     {
         //If Slingshot is not in aimingMode, don't run this code
         if (!aimingMode) return;
@@ -59,7 +59,7 @@ public class Slingshot : MonoBehaviour
         //Get the current mouse position in 2D screen coordinates
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
-        Vector3 mousePos3D = Camera.main.ScreenToViewportPoint(mousePos2D);
+        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
 
         //find the delta from the launchPos to the mousePos3D
         Vector3 mouseDelta = mousePos3D - launchPos;
@@ -82,6 +82,7 @@ public class Slingshot : MonoBehaviour
             aimingMode = false;
             projectileRigidbody.isKinematic = false;
             projectileRigidbody.velocity = -mouseDelta * velocityMult;
+            FollowCam.POI = projectile;
             projectile = null;
         }
     }
