@@ -9,11 +9,17 @@ public class TankShot : MonoBehaviour
     public static float topZ = 30f;
     public static float leftX = -30f;
     public static float rightX = 30f;
-    
+    public float speed = 5f;
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 pos = transform.position;                  // b
+
+        pos.x += speed * Time.deltaTime;                   // c
+
+        transform.position = pos;
+
         if (transform.position.z < bottomZ)
         {
 
@@ -38,6 +44,6 @@ public class TankShot : MonoBehaviour
             Destroy(this.gameObject);                                      // b
 
         }
-
+        return;
     }
 }

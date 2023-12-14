@@ -1042,6 +1042,7 @@ GameObject:
   - component: {fileID: 558677114}
   - component: {fileID: 558677113}
   - component: {fileID: 558677112}
+  - component: {fileID: 558677116}
   m_Layer: 12
   m_Name: Tank (3)
   m_TagString: Untagged
@@ -1138,6 +1139,23 @@ Transform:
   - {fileID: 1277086053}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &558677116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558677111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea24c7472f007246b398fa182ab1174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankShotPrefab: {fileID: 972677933}
+  speed: 1
+  leftAndRightEdge: 10
+  chanceToChangeDirections: 0.01
+  secondsBetweenFireTankShot: 1
 --- !u!1 &748007268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1463,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904222425}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &972677933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 436288017382734504, guid: 5bdfdf1ea28349047ad76460a2057f95, type: 3}
+  m_PrefabInstance: {fileID: 8341516940861533138}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &972677939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972677933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50df9580823f2ac419ae1630bb4c6cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1170123615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1796,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   countText: {fileID: 0}
-  winTextObject: {fileID: 0}
 --- !u!1 &1277086052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,6 +2358,7 @@ GameObject:
   - component: {fileID: 1713034415}
   - component: {fileID: 1713034414}
   - component: {fileID: 1713034418}
+  - component: {fileID: 1713034419}
   m_Layer: 12
   m_Name: Tank (2)
   m_TagString: Untagged
@@ -2446,6 +2482,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1713034419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713034413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dbd71f338f7a24993197b60285026e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankShotPrefab: {fileID: 972677933}
+  speed: 1
+  leftAndRightEdge: 10
+  chanceToChangeDirections: 0.01
+  secondsBetweenFireTankShot: 1
 --- !u!1 &1748158457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2512,7 @@ GameObject:
   - component: {fileID: 1748158459}
   - component: {fileID: 1748158458}
   - component: {fileID: 1748158462}
+  - component: {fileID: 1748158463}
   m_Layer: 12
   m_Name: Tank
   m_TagString: Untagged
@@ -2582,6 +2636,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1748158463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748158457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dbd71f338f7a24993197b60285026e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankShotPrefab: {fileID: 972677933}
+  speed: 1
+  leftAndRightEdge: 10
+  chanceToChangeDirections: 0.01
+  secondsBetweenFireTankShot: 1
 --- !u!1 &1767746361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,6 +3252,7 @@ GameObject:
   - component: {fileID: 1941951496}
   - component: {fileID: 1941951495}
   - component: {fileID: 1941951494}
+  - component: {fileID: 1941951498}
   m_Layer: 12
   m_Name: Tank (1)
   m_TagString: Untagged
@@ -3277,6 +3349,23 @@ Transform:
   - {fileID: 748007269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &1941951498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941951493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea24c7472f007246b398fa182ab1174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankShotPrefab: {fileID: 972677933}
+  speed: 1
+  leftAndRightEdge: 10
+  chanceToChangeDirections: 0.01
+  secondsBetweenFireTankShot: 1
 --- !u!1 &2072217198
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,10 +3563,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4431910401718169033, guid: 5bdfdf1ea28349047ad76460a2057f95, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4431910401718169033, guid: 5bdfdf1ea28349047ad76460a2057f95, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 436288017382734504, guid: 5bdfdf1ea28349047ad76460a2057f95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 972677939}
   m_SourcePrefab: {fileID: 100100000, guid: 5bdfdf1ea28349047ad76460a2057f95, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

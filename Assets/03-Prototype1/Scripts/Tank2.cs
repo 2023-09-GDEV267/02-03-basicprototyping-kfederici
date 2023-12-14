@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tank : MonoBehaviour
+public class Tank2 : MonoBehaviour
 {
     [Header("Set in Inspector")]
     public GameObject TankShotPrefab;
-    public float speed = 1f;
+    public float speed = 6f;
     public float leftAndRightEdge = 10f;
     public float chanceToChangeDirections = 0.1f;
-    public float secondsBetweenFireTankShot = 1f;
+    public float secondsBetweenFireTankShot = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,17 +31,17 @@ public class Tank : MonoBehaviour
     {
         Vector3 pos = transform.position;                  // b
 
-        pos.x += speed * Time.deltaTime;                   // c
+        pos.z += speed * Time.deltaTime;                   // c
 
         transform.position = pos;
 
-        if (pos.x < -leftAndRightEdge)
+        if (pos.z < -leftAndRightEdge)
         {                             // a
 
             speed = Mathf.Abs(speed); // Move right                    // b
 
         }
-        else if (pos.x > leftAndRightEdge)
+        else if (pos.z > leftAndRightEdge)
         {                       // c
 
             speed = -Mathf.Abs(speed); // Move left                    // c
