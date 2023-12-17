@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tank : MonoBehaviour
+public class TankBottom : MonoBehaviour
 {
     [Header("Set in Inspector")]
     public GameObject TankShotPrefab;
@@ -16,35 +16,35 @@ public class Tank : MonoBehaviour
         Invoke("FireTankShot", 2f);
     }
     void FireTankShot()
-    {                                                  // b
+    {
 
-        GameObject TankShot = Instantiate<GameObject>(TankShotPrefab);      // c
+        GameObject TankShotUp = Instantiate<GameObject>(TankShotPrefab);
 
-        TankShot.transform.position = transform.position;                  // d
+        TankShotUp.transform.position = transform.position;
 
-        Invoke("FireTankShot", secondsBetweenFireTankShot);                // e
+        Invoke("FireTankShot", secondsBetweenFireTankShot);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;                  // b
+        Vector3 pos = transform.position;
 
-        pos.x += speed * Time.deltaTime;                   // c
+        pos.x += speed * Time.deltaTime;
 
         transform.position = pos;
 
         if (pos.x < -leftAndRightEdge)
-        {                             // a
+        {
 
-            speed = Mathf.Abs(speed); // Move right                    // b
+            speed = Mathf.Abs(speed); // Move right                    
 
         }
         else if (pos.x > leftAndRightEdge)
-        {                       // c
+        {
 
-            speed = -Mathf.Abs(speed); // Move left                    // c
+            speed = -Mathf.Abs(speed); // Move left                    
 
         }
     }
@@ -52,7 +52,7 @@ public class Tank : MonoBehaviour
     void FixedUpdate()
     {
         if (Random.value < chanceToChangeDirections)
-        {                     // b
+        {
 
             speed *= -1; // Change direction
 
