@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea24c7472f007246b398fa182ab1174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankShotPrefab: {fileID: 937950414}
+  TankShotDownPrefab: {fileID: 937950414}
   speed: 4
   leftAndRightEdge: 10
   chanceToChangeDirections: 0.02
@@ -1170,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6610034753212824052, guid: c49c9224af7f94147bc79466ec182e8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6610034753212824052, guid: c49c9224af7f94147bc79466ec182e8e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1337,6 +1337,7 @@ GameObject:
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
   - component: {fileID: 792234109}
+  - component: {fileID: 792234110}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1430,6 +1431,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479b6ae4cd7030941a67c63154b49dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &792234110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792234105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bc7c95f12189f478be2e8d27d9b556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1220556509}
 --- !u!1 &904222425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1557,89 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7214279119258230768, guid: bb2f9cb553f06fa469d7130c23821534, type: 3}
   m_PrefabInstance: {fileID: 1258686839}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &986342286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 436288017382734504, guid: 8c0ae6970720b6f4d9fdd416b75fae7f, type: 3}
+  m_PrefabInstance: {fileID: 2106690299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1036179791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036179794}
+  - component: {fileID: 1036179793}
+  - component: {fileID: 1036179792}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1036179792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036179791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+--- !u!114 &1036179793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036179791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1036179794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036179791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102867451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4214544160307106246, guid: c49c9224af7f94147bc79466ec182e8e, type: 3}
@@ -1702,7 +1799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 481931068929883489, guid: fd67a3abf4d740440a9b9cb8ae1f7709, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 481931068929883489, guid: fd67a3abf4d740440a9b9cb8ae1f7709, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1755,7 +1852,7 @@ GameObject:
   - component: {fileID: 1220556510}
   - component: {fileID: 1220556514}
   - component: {fileID: 1220556516}
-  - component: {fileID: 1220556515}
+  - component: {fileID: 1220556517}
   m_Layer: 14
   m_Name: Player
   m_TagString: Untagged
@@ -1876,7 +1973,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1220556515
+--- !u!114 &1220556516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220556509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2eee5ac09df7742923bb636e28e483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  countText: {fileID: 0}
+--- !u!114 &1220556517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1906,20 +2017,6 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1220556516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220556509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d2eee5ac09df7742923bb636e28e483, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  countText: {fileID: 0}
 --- !u!1001 &1258686839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1938,7 +2035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3612104394559346545, guid: bb2f9cb553f06fa469d7130c23821534, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3612104394559346545, guid: bb2f9cb553f06fa469d7130c23821534, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2675,7 +2772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dbd71f338f7a24993197b60285026e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankShotPrefab: {fileID: 0}
+  TankShotRightPrefab: {fileID: 986342286}
   speed: 4
   leftAndRightEdge: 10
   chanceToChangeDirections: 0.02
@@ -2829,7 +2926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dbd71f338f7a24993197b60285026e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankShotPrefab: {fileID: 1102867451}
+  TankShotRightPrefab: {fileID: 1102867451}
   speed: 4
   leftAndRightEdge: 10
   chanceToChangeDirections: 0.02
@@ -3542,7 +3639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea24c7472f007246b398fa182ab1174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankShotPrefab: {fileID: 661954285}
+  TankShotDownPrefab: {fileID: 661954285}
   speed: 4
   leftAndRightEdge: 10
   chanceToChangeDirections: 0.02
@@ -3694,7 +3791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3892182402732426581, guid: 8c0ae6970720b6f4d9fdd416b75fae7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3892182402732426581, guid: 8c0ae6970720b6f4d9fdd416b75fae7f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3754,3 +3851,4 @@ SceneRoots:
   - {fileID: 646579429}
   - {fileID: 1258686839}
   - {fileID: 2106690299}
+  - {fileID: 1036179794}

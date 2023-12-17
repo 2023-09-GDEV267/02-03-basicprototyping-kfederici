@@ -17,7 +17,7 @@ public class Prototype : MonoBehaviour
 
     public void TankShotDestroyed()
     {
-        // destroy all of the falling apples
+        
         GameObject[] tShotArray = GameObject.FindGameObjectsWithTag("TankShot");
         foreach (GameObject tGO in tShotArray)
         {

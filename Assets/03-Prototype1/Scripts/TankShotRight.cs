@@ -32,6 +32,6 @@ public class TankShotRight : MonoBehaviour
             pScript.TankShotDestroyed();
 
         }
-        return;
+        
     }
 }

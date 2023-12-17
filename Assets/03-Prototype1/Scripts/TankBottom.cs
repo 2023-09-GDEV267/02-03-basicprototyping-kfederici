@@ -5,7 +5,7 @@ using UnityEngine;
 public class TankBottom : MonoBehaviour
 {
     [Header("Set in Inspector")]
-    public GameObject TankShotPrefab;
+    public GameObject TankShotUpPrefab;
     public float speed = 1f;
     public float leftAndRightEdge = 10f;
     public float chanceToChangeDirections = 0.1f;
@@ -18,7 +18,7 @@ public class TankBottom : MonoBehaviour
     void FireTankShot()
     {
 
-        GameObject TankShotUp = Instantiate<GameObject>(TankShotPrefab);
+        GameObject TankShotUp = Instantiate<GameObject>(TankShotUpPrefab);
 
         TankShotUp.transform.position = transform.position;
 
